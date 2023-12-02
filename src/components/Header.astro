@@ -1,0 +1,168 @@
+<header>
+    <div class="container d-flex">
+        <div class="d-flex main-logo-column">
+            <a href="/"><img class="main-logo" src="/images/tg-logo.png" alt="Terrible Gerald's Logo"></a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <nav class="main-nav d-flex">
+            <ul class="main-nav-list d-flex">
+                <li><a href="/">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="/src/pages/events.astro">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const mainNav = document.querySelector(".main-nav");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mainNav.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        mainNav.classList.remove("active");
+    }))
+
+</script>
+
+<style>
+
+    header .container {
+        padding: 1.2rem;
+        gap: 2rem;
+    }
+
+    @media (max-width: 1000px) {
+
+        header .container {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+    }
+
+    @media (max-width: 400px) {
+
+        .main-logo-column {
+            flex-direction: column;
+        }
+
+    }
+
+    .main-logo {
+        max-width: 300px;
+        min-width: 150px;
+    }
+
+    @media (max-width: 1000px) {
+
+        .main-logo {
+            margin-inline: auto;
+        }
+
+    }
+
+    .main-nav {
+        width: 100%;
+        align-items: center;
+    }
+
+    @media (max-width: 1000px) {
+
+        .main-nav {
+            display: none;
+        }
+
+        .main-nav.active {
+            display: block;
+        }
+
+    }
+
+    .main-nav-list {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        text-transform: lowercase;
+        font-weight: 600;
+        font-size: 1.75em;
+        align-items: center;
+    }
+
+    @media (max-width: 1000px) {
+
+        .main-nav-list {
+            text-align: center;
+            flex-direction: column;
+        }
+
+    }
+
+    .main-nav-list a {
+        text-decoration: none;
+    }
+
+    .main-nav-list a:is(:hover, :focus) {
+        padding-bottom: 0.25rem;
+        border-bottom: 5px red solid;
+    }
+
+    /* HAMBUGER */
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 1000px) {
+
+        .hamburger {
+            display: block;
+            height: 100%;
+            padding: 5px 10px;
+            border: 1px #000 solid;
+            border-radius: 6px;
+            align-self: center;
+            margin-left: auto;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin: 6px auto;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background-color: #000;
+    }
+
+</style>

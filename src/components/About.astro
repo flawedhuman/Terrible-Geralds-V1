@@ -1,0 +1,54 @@
+<section id="about">
+    <div class="container">
+        <div class="about-content-column">
+            <h3>About.</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi blanditiis odio ullam quasi consequuntur eum nostrum, a sequi at cupiditate, itaque hic error quod fuga nesciunt esse saepe eaque sunt!
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi blanditiis odio ullam quasi consequuntur eum nostrum, a sequi at cupiditate, itaque hic error quod fuga nesciunt esse saepe eaque sunt!
+            </p>
+        </div>
+    </div>
+    <div class="container-full">
+        <div class="container about-img-column">
+            <div class="about-img">
+                <img src="/images/about-image.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+
+    section#about {
+        padding: 2.5rem 1.5rem 0;
+        background-color: #000;
+        color: #FFF;
+    }
+
+    .about-content-column {
+        margin-bottom: 3rem;
+        max-width: 95ch;
+    }
+
+    .about-img {
+        margin-block: auto;
+        padding: 0;
+    }
+
+    @media (max-width: 1000px) {
+
+        section#about:has(.container-full) {
+            padding: 1.5rem 0 0;
+            background-color: #000;
+            color: #FFF;
+        }
+
+        .about-img-column {
+            padding: 0;
+        }
+
+    }
+
+</style>

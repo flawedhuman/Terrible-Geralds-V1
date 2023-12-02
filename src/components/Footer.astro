@@ -1,0 +1,64 @@
+<footer>
+    <nav class="footer-nav d-flex">
+        <ul class="footer-nav-list d-flex">
+            <li><a href="/">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="/src/pages/events.astro">Events</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <p>
+        Original Art by <a href="https://www.facebook.com/Satisfactionnotguaranteed?__cft__[0]=AZXglnTZYqQTgHmuGE1l8PPKmdJLZdSLFldAE5VaVGJn9CPIn4scwTlrGkaNCYOQA7SxjzpPn5_aSwtiVZPki5v2jgtWVH59RLz07_Fiy-Uft6ai46E5dpRq4ZwqVyjf--MyM73mt2w49finmq98icB_FqdYYJsl_tMyotFQup8qkgK4ICc2KL_-GUWOd9CpDfY&__tn__=-]K-R">Satisfaction Not Guaranteed</a>
+    </p>
+</footer>
+
+<style>
+
+    footer {
+        padding: 1.5rem 1.5rem 0;
+        color: #FFF;
+        background-color: #000;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+
+    .footer-nav-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 2rem;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: lowercase;
+        font-weight: 600;
+        font-size: 1.75em;
+    }
+
+    @media (max-width: 1000px) {
+
+        .footer-nav-list {
+            text-align: center;
+            flex-direction: column;
+        }
+
+    }
+
+    .footer-nav-list a {
+        text-decoration: none;
+    }
+
+    .footer-nav-list a:is(:hover, :focus) {
+        padding-bottom: 0.25rem;
+        border-bottom: 5px red solid;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 1.5em;
+        text-align: center;
+    }
+
+</style>
