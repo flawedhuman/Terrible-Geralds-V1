@@ -1,0 +1,119 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+---
+<MasterLayout title="Terrible Gerald's | Events">
+    <div class="container">
+        <h1>Events.</h1>
+    </div>
+	<div class="container event-content d-flex">
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum aspernatur, quam fugiat magnam ratione incidunt suscipit reprehenderit quas nihil similique nam. Amet nobis ea aut id ad dolores enim?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum aspernatur, quam fugiat magnam ratione incidunt suscipit reprehenderit quas nihil similique nam. Amet nobis ea aut id ad dolores enim?
+            </p>
+            <h3>Next event.</h3>
+            <a href="#">
+                <img class="next-event-img" src="/images/event-flyer-1.jpg" alt="">
+            </a>
+            <h3>Upcoming events.</h3>
+
+            <!-- EVENT 1 -->
+            <div class="event-item d-flex">
+                <div>
+                    <h4>PIZZA PARTY</h4>
+                    <p class="event-item-description">
+                        Saturday, October 31<br>
+                        Site-1 Brewing<br>
+                        2566 Farnam Street
+                    </p>
+                </div>
+            </div>
+
+            <!-- EVENT 2 -->
+            <div class="event-item d-flex">
+                <div>
+                    <h4>PIZZA PARTY</h4>
+                    <p class="event-item-description">
+                        Saturday, October 31<br>
+                        Site-1 Brewing<br>
+                        2566 Farnam Street
+                    </p>
+                </div>
+            </div>
+
+            <!-- EVENT 3 -->
+            <div class="event-item d-flex">
+                <div>
+                    <h4>PIZZA PARTY</h4>
+                    <p class="event-item-description">
+                        Saturday, October 31<br>
+                        Site-1 Brewing<br>
+                        2566 Farnam Street
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        <aside>
+            <h4>Need some pizza?</h4>
+            <p>
+                Contact us so we can make your dreams come true!
+            </p>
+            <button class="btn btn-secondary">Book Terrible Gerald's!</button>
+        </aside>
+    </div>
+</MasterLayout>
+
+<style>
+
+    .event-content {
+        padding-top: 0;
+        gap: 2.5rem;
+    }
+
+    @media (max-width: 1000px) {
+
+        .event-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+    }
+
+    .event-content aside {
+        padding: 1rem 2rem 2rem;
+        border-left: 5px rgb(194, 12, 33) solid;
+    }
+
+    @media (max-width: 1000px) {
+
+        .event-content aside {
+            border-left: none;
+        }
+
+    }
+
+    .event-content aside .btn {
+        margin: 1rem 0;
+    }
+
+    .next-event-img {
+        margin: 0 auto;
+    }
+
+    .event-item {
+        margin-bottom: 2rem;
+        align-items: center;
+        border-bottom: 5px rgb(194, 12, 33) solid;
+    }
+
+    .event-item-description {
+        font-size: 1.2em;
+        font-family: 'Sanchez', Georgia, 'Times New Roman', Times, serif;
+        line-height: 1.2;
+    }
+
+</style>
