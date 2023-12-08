@@ -1,7 +1,4 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({
-    site: 'https://flawedhuman.github.io',
-    base: '/Terrible-Geralds-V1/',
-});
+export default defineConfig({});
