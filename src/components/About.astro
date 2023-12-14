@@ -1,13 +1,19 @@
 <section id="about">
-    <div class="container">
+    <div class="container d-flex about-gerald-wrap">
         <div class="about-content-column">
             <h3>About.</h3>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi blanditiis odio ullam quasi consequuntur eum nostrum, a sequi at cupiditate, itaque hic error quod fuga nesciunt esse saepe eaque sunt!
+                Terrible Gerald's pizza fresh, approachable take on old world classics. We keep you in your comfort zone with traditional pies, and challenge the norms with crowd favorites, like the Crabby Gerald&mdash;Omaha's premier Crab Rangoon Pie. Our concept is simple&mdash;unorthodox Neapolitan pizza, on wheels. 
             </p>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi blanditiis odio ullam quasi consequuntur eum nostrum, a sequi at cupiditate, itaque hic error quod fuga nesciunt esse saepe eaque sunt!
+                We believe that dough is the window to the soul. Erica's friends said they heard our crust was "the best in town." Tracy said the garlic bread was "life changing." Heather said she never eats "pizza bones" [crust], but she eats ours. So we must be doing something right with our 48 hour fermentation process, because sleeping ain't it. Terrible Gerald's can't speak for all pizza joints on wheels, but we can speak for ourselves when we say the pizza <em>doesn't suck</em>.
             </p>
+            <p>
+                Experience us for yourself&mdash;it surely won't be a terrible decision. For updates on where the Dough-Jo will be located, check back here, and follow us on social media!
+            </p>
+        </div>
+        <div>
+            <img class="big-boy-gerald" src="/images/tallboy-gerald.png" alt="Big Boy Gerald!">
         </div>
     </div>
     <div class="container-full">
@@ -27,9 +33,30 @@
         color: #FFF;
     }
 
+    .about-gerald-wrap {
+        gap: 2rem;
+    }
+
+    @media (max-width: 700px) {
+
+        .about-gerald-wrap {
+            flex-direction: column;
+        }
+
+    }
+
     .about-content-column {
-        margin-bottom: 3rem;
-        max-width: 95ch;
+        margin-bottom: 2rem;
+        max-width: 110ch;
+    }
+
+    .big-boy-gerald {
+        margin: 0 auto 3rem;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        min-width: 300px;
     }
 
     .about-img {
