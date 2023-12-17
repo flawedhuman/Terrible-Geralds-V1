@@ -52,9 +52,7 @@ import MasterLayout from "../layouts/MasterLayout.astro";
         </div>
         <aside>
             <img class="moto-gerald" src="/images/moto-gerald.png" alt="VROOM VROOM!">
-            <hr />
-            <br>
-            <h4>You’re never too old for a pizza party.</h4>
+            <h4 class="top-line">You’re never too old for a pizza party.</h4>
             <p>
                 Contact us so we can make your dreams come true!
             </p>
@@ -108,10 +106,36 @@ import MasterLayout from "../layouts/MasterLayout.astro";
         border-bottom: 5px rgb(194, 12, 33) solid;
     }
 
+    .event-item:last-child {
+        border-bottom: none;
+    }
+
     .event-item-description {
         font-size: 1.4em;
         font-family: 'League Spartan', Arial, Helvetica, sans-serif;
         line-height: 1.2;
+    }
+
+    .moto-gerald {
+        animation: ride 1000ms ease-in-out infinite;
+    }
+
+    .top-line {
+        padding-top: 2rem;
+        border-top: 5px rgb(194, 12, 33) solid;
+    }
+
+    @keyframes ride {
+        0% {
+            transform: translateX(-10px);
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(15px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
     }
 
 </style>

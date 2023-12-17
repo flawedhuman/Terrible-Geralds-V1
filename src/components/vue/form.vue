@@ -24,7 +24,7 @@
             <label for="message">Additional Info</label>
             <textarea id="message" name="message" rows="6" v-model="message"></textarea>
         </div>
-        <span>{{error}}</span>
+        <span class="error">{{error}}</span>
         <button class="btn btn-primary" @click="submit">Submit</button>
     </div>
     <div v-if="isFormSubmitted">
@@ -118,4 +118,13 @@ export default {
         font-size: 2em;
         font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
     }
+
+    .error {
+        text-align: center;
+        font-size: 1.5rem;
+        border-bottom: 3px #000 solid;
+        rotate: 1deg;
+        font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
+    }
+
 </style>
