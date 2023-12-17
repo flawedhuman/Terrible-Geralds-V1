@@ -90,6 +90,7 @@ export default {
     @media (max-width: 700px) {
     
         .items {
+            margin-bottom: 4rem;
             min-width: 350px;
             max-width: 550px;
         }
