@@ -7,13 +7,6 @@ import MasterLayout from "../layouts/MasterLayout.astro";
     </div>
 	<div class="container event-content d-flex">
         <div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum aspernatur, quam fugiat magnam ratione incidunt suscipit reprehenderit quas nihil similique nam. Amet nobis ea aut id ad dolores enim?
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsum aspernatur, quam fugiat magnam ratione incidunt suscipit reprehenderit quas nihil similique nam. Amet nobis ea aut id ad dolores enim?
-            </p>
-            <h3>Next event.</h3>
             <a href="#">
                 <img class="next-event-img" src="/images/event-flyer-1.jpg" alt="">
             </a>
@@ -65,7 +58,7 @@ import MasterLayout from "../layouts/MasterLayout.astro";
             <p>
                 Contact us so we can make your dreams come true!
             </p>
-            <a href="#contact" class="btn btn-secondary">Book Us Now</a>
+            <a href="#" class="contact-trigger btn btn-secondary">Book Us Now</a>
         </aside>
     </div>
 </MasterLayout>
@@ -104,7 +97,9 @@ import MasterLayout from "../layouts/MasterLayout.astro";
     }
 
     .next-event-img {
-        margin: 0 auto;
+        margin: 3rem auto 5rem;
+        display: block;
+        border: 3px #000 solid;
     }
 
     .event-item {
@@ -114,8 +109,8 @@ import MasterLayout from "../layouts/MasterLayout.astro";
     }
 
     .event-item-description {
-        font-size: 1.2em;
-        font-family: 'Sanchez', Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.4em;
+        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
         line-height: 1.2;
     }
 

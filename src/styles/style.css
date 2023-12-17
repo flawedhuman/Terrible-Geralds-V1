@@ -75,6 +75,22 @@ textarea:not([rows]) {
 
 /* TERRIBLE GERALD'S TERRIBLE STYLESHEET */
 
+/* FONTS */
+
+@font-face {
+  font-family: 'Bobby Jones Soft Outline';
+  font-weight: 400;
+  src: url('/fonts/bobby_jones_soft_outline-webfont.woff2') format('woff2'),
+       url('/fonts/bobby_jones_soft_outline-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bobby Jones Soft Regular';
+  font-weight: 400;
+  src: url('/fonts/bobby_jones_soft-webfont.woff2') format('woff2'),
+       url('/fonts/bobby_jones_soft-webfont.woff') format('woff');
+}
+
 /* BASICS */
 
 body {
@@ -108,12 +124,14 @@ h1, h3 {
   font-size: 4em;
   font-weight: 600;
   line-height: 1;
+  font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
 }
 
 h4 {
   font-size: 2.5em;
   margin-bottom: 0.2em;
   font-weight: 600;
+  font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
 }
 
 /* BUTTONS */
@@ -128,9 +146,10 @@ h4 {
   display: inline-block;
   font-weight: 600;
   text-transform: lowercase;
-  font-size: 1.2em;
+  font-size: 2rem;
   line-height: 1;
   text-decoration: none;
+  font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
 }
 
 @media (max-width: 600px) {
@@ -156,7 +175,7 @@ h4 {
 .btn-secondary {
   background-color: rgb(194, 12, 33);
   color: #FFF;
-  font-size: 1.5em;
+  font-size: 2em;
   transition: all ease-in-out 250ms;
 }
 
@@ -166,6 +185,20 @@ h4 {
   color: rgb(194, 12, 33);
   rotate: 2deg;
   border: 2px rgb(194, 12, 33) solid;
+}
+
+a.contact-trigger {
+  padding: 0.5rem 1rem;
+}
+
+a.contact-trigger:is(:link, :visited) {
+  background-color: rgb(194, 12, 33);
+  color: #FFF;
+}
+
+a.contact-trigger:is(:hover, :focus, :active) {
+  background-color: #FFF;
+  color:  rgb(194, 12, 33);
 }
 
 /* UTILITIES */
