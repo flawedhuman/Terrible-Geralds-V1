@@ -1,3 +1,7 @@
+---
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+---
 <footer>
     <nav class="footer-nav d-flex">
         <ul class="footer-nav-list d-flex">
@@ -25,7 +29,7 @@
         </li>
     </ul>
     <p>
-        Original Art by <a href="https://www.facebook.com/Satisfactionnotguaranteed?__cft__[0]=AZXglnTZYqQTgHmuGE1l8PPKmdJLZdSLFldAE5VaVGJn9CPIn4scwTlrGkaNCYOQA7SxjzpPn5_aSwtiVZPki5v2jgtWVH59RLz07_Fiy-Uft6ai46E5dpRq4ZwqVyjf--MyM73mt2w49finmq98icB_FqdYYJsl_tMyotFQup8qkgK4ICc2KL_-GUWOd9CpDfY&__tn__=-]K-R">Satisfaction Not Guaranteed</a>
+        All the things &copy; Terrible Gerald's {currentYear}  / Original Art by <a href="https://www.facebook.com/Satisfactionnotguaranteed?__cft__[0]=AZXglnTZYqQTgHmuGE1l8PPKmdJLZdSLFldAE5VaVGJn9CPIn4scwTlrGkaNCYOQA7SxjzpPn5_aSwtiVZPki5v2jgtWVH59RLz07_Fiy-Uft6ai46E5dpRq4ZwqVyjf--MyM73mt2w49finmq98icB_FqdYYJsl_tMyotFQup8qkgK4ICc2KL_-GUWOd9CpDfY&__tn__=-]K-R">Satisfaction Not Guaranteed</a>
     </p>
 </footer>
 
@@ -84,6 +88,7 @@
 
     footer p {
         margin: 0;
+        font-size: 0.9rem;
         padding: 1.5em;
         text-align: center;
     }

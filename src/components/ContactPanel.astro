@@ -3,9 +3,6 @@ import Form from "../components/vue/form.vue";
 ---
 <div id="full-screen-wrap">
     <div>
-        <div class="close-contact-form-wrap">
-            <button class="close-contact-form">X</button>
-        </div>
         <div class="container">
             <Form client:load />
         </div>
@@ -41,44 +38,13 @@ import Form from "../components/vue/form.vue";
         }
 
     }
-
-    .close-contact-form-wrap {
-        max-width: 600px;
-        width: 100%;
-        text-align: right;
-    }
-
-    @media (max-width: 700px) {
-
-        .close-contact-form-wrap {
-            max-width: 550px;
-            width: 90%;
-            text-align: right;
-        }
-
-    }
-
-    #full-screen-wrap button.close-contact-form {
-        font-size: 3rem;
-        text-align: right;
-        background-color: transparent;
-        border: none;
-        font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
-        cursor: pointer;
-        color: #FFF;
-    }
-
-    #full-screen-wrap button.close-contact-form:is(:hover, :focus) {
-        color: #000;
-        rotate: 5deg;
-    }
     
-
 </style>
 
 
 <script>
-	
+
+    const dialog = document.querySelector("dialog");    
 	const contactTrigger = document.querySelectorAll('a.contact-trigger');
 	const closeTrigger = document.querySelectorAll('button.close-contact-form');
 
@@ -95,10 +61,10 @@ import Form from "../components/vue/form.vue";
 	});
 
     function openContactForm() {
-        document.getElementById("full-screen-wrap").style.width = "100vw";
+        dialog.showModal();
     }
 
     function closeContactForm() {
-        document.getElementById("full-screen-wrap").style.width = "0%";
+        dialog.close();
     }
 </script>
