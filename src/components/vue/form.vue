@@ -81,7 +81,7 @@ export default {
             })
             .then(response => this.isFormSubmitted = true)
             .catch(error => console.log(error))
-            },
+        },
     },
 }
 </script>

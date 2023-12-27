@@ -1,5 +1,6 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
+import Pizza from "../components/vue/pizza.vue";
 ---
 <MasterLayout title="Terrible Gerald's Pizza | Events!">
     <div class="container">
@@ -11,6 +12,8 @@ import MasterLayout from "../layouts/MasterLayout.astro";
                 <img class="next-event-img" src="/images/event-flyer-1.jpg" alt="">
             </a>
             <h3>Upcoming events.</h3>
+
+            <Pizza />
 
             <!-- EVENT 1 -->
             <div class="event-item d-flex">
