@@ -26,6 +26,10 @@
                     <input type="text" name="count" id="count" v-model="count" />
                 </div>
                 <div>
+                    <label for="grapevine">How Did You Hear About Us?</label>
+                    <input type="text" name="grapevine" id="grapevine" v-model="grapevine" />
+                </div>
+                <div>
                     <label for="message">Additional Info</label>
                     <textarea id="message" name="message" rows="6" v-model="message"></textarea>
                 </div>
@@ -33,7 +37,7 @@
                 <button class="btn btn-secondary" @click.prevent="submit">Submit</button>
             </div>
             <div v-if="isFormSubmitted">
-                <h1>Thank you for submitting the form</h1>
+                <h1>Thank you for submitting the form.</h1>
             </div>
         </form>
     </dialog>
@@ -49,6 +53,7 @@ export default {
             date: "",
             location: "",
             count: "",
+            grapevine: "",
             message: "",
             error: "",
             isFormSubmitted: false
@@ -57,7 +62,7 @@ export default {
     methods: {
 
         submit() {
-            if (this.name == "" || this.emailPhone == "" || this.date == "" || this.location == "" || this.count == "" || this.message == "") {
+            if (this.name == "" || this.emailPhone == "" || this.date == "" || this.location == "" || this.count == "" || this.grapevine == "" || this.message == "") {
                 this.error = "Please fill all the fields";
                 return;
             } else {
@@ -70,6 +75,7 @@ export default {
             formData.append("date", this.date);
             formData.append("location", this.location);
             formData.append("count", this.count);
+            formData.append("grapevine", this.grapevine);
             formData.append("message", this.message);
 
             fetch("https://getform.io/f/64e182fc-b375-4a84-8da2-0b9ab51b2abe", {

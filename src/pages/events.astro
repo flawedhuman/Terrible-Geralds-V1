@@ -1,0 +1,88 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+import EventsList from "../components/vue/events-list.vue";
+---
+<MasterLayout title="Terrible Gerald's Pizza | Events!">
+    <div class="container">
+        <h1>Events</h1>
+    </div>
+	<div class="container event-content d-flex">
+        <div>
+            <a href="#">
+                <img class="next-event-img" src="/images/event-flyer-1.jpg" alt="">
+            </a>
+            <h3>Upcoming events</h3>
+
+            <EventsList client:load />
+            
+        </div>
+        <aside>
+            <img class="moto-gerald" src="/images/moto-gerald.png" alt="VROOM VROOM!">
+            <h4 class="top-line">You’re never too old for a pizza party.</h4>
+            <a href="#" class="contact-trigger btn btn-secondary">Book Us Now</a>
+        </aside>
+    </div>
+</MasterLayout>
+
+<style>
+
+    .event-content {
+        padding-top: 0;
+        gap: 2.5rem;
+    }
+
+    @media (max-width: 1000px) {
+
+        .event-content {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+    }
+
+    .event-content aside {
+        padding: 1rem 2rem 2rem;
+        border-left: 5px rgb(194, 12, 33) solid;
+    }
+
+    @media (max-width: 1000px) {
+
+        .event-content aside {
+            border-left: none;
+        }
+
+    }
+
+    .event-content aside .btn {
+        margin: 1rem 0;
+    }
+
+    .next-event-img {
+        margin: 3rem auto 5rem;
+        display: block;
+        border: 3px #000 solid;
+    }
+
+    .moto-gerald {
+        animation: ride 1000ms ease-in-out infinite;
+    }
+
+    .top-line {
+        padding-top: 2rem;
+        border-top: 5px rgb(194, 12, 33) solid;
+    }
+
+    @keyframes ride {
+        0% {
+            transform: translateX(-10px);
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(15px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+</style>
