@@ -104,7 +104,8 @@ export default {
     
         .items {
             margin-bottom: 4rem;
-            min-width: 350px;
+            padding: 0;
+            min-width: 250px;
             max-width: 550px;
         }
 
