@@ -1,3 +1,7 @@
+---
+import HomepageEvent from "../components/vue/homepage-event.vue";
+---
+
 <div class="container">
   <div class="hero-wrapper">
       <div class="flex-columns">
@@ -6,14 +10,7 @@
           </div>
           <div class="event-info-column">
               <h2>Next Event</h2>
-              <h3>PIZZA PARTY</h3>
-              <p>
-                  Saturday, October 31
-              </p>
-              <p>
-                  Site-1 Brewing<br>
-                  2566 Farnam Street
-              </p>
+              <HomepageEvent client:load />
               <a href="/events" class="btn btn-primary">Upcoming Events</a>
           </div>
       </div>
@@ -144,12 +141,17 @@
   .event-info-column {
     margin-bottom: 2rem;
   }
+
+  .event-info-column .btn {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 @media (max-width: 400px) {
   .event-info-column {
     padding: 1rem;
-    text-align: center;
   }
 }
 

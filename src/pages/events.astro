@@ -4,14 +4,14 @@ import EventsList from "../components/vue/events-list.vue";
 ---
 <MasterLayout title="Terrible Gerald's Pizza | Events!">
     <div class="container">
-        <h1>Events</h1>
+        <h1>Upcoming Events</h1>
     </div>
 	<div class="container event-content d-flex">
-        <div>
-            <a href="#">
+        <div class="event-content-main">
+
+            <!-- <a href="#">
                 <img class="next-event-img" src="/images/event-flyer-1.jpg" alt="">
-            </a>
-            <h3>Upcoming events</h3>
+            </a> -->
 
             <EventsList client:load />
             
@@ -27,8 +27,12 @@ import EventsList from "../components/vue/events-list.vue";
 <style>
 
     .event-content {
-        padding-top: 0;
+        padding-top: 50px;
         gap: 2.5rem;
+    }
+
+    .event-content > div {
+        flex: 1;
     }
 
     @media (max-width: 1000px) {
@@ -43,6 +47,7 @@ import EventsList from "../components/vue/events-list.vue";
     .event-content aside {
         padding: 1rem 2rem 2rem;
         border-left: 5px rgb(194, 12, 33) solid;
+        max-width: 450px;
     }
 
     @media (max-width: 1000px) {
@@ -55,6 +60,7 @@ import EventsList from "../components/vue/events-list.vue";
 
     .event-content aside .btn {
         margin: 1rem 0;
+        padding: 1.25rem 2rem;
     }
 
     .next-event-img {

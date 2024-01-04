@@ -1,18 +1,21 @@
 <template>
-    <div class="event-item" v-for="event in events">
-        <h4>{{ event.content.event_title }}</h4>
+    <div v-if="events.length > 0" class="event-item">
+        <h4>{{ events[0].content.event_title }}</h4>
         <p class="event-item-description">
-            {{ formatDate(event.content.event_start_time) }}<br>
-            {{ formatTime(event.content.event_start_time) }} - {{ formatTime(event.content.event_end_time) }}<br>
-            Location: {{ event.content.event_location }}<br>
-            Event Info : {{  event.content.event_description  }}
+            {{ formatDate(events[0].content.event_start_time) }}<br>
+            {{ formatTime(events[0].content.event_start_time) }} - {{ formatTime(events[0].content.event_end_time) }}<br>
+            Location: {{ events[0].content.event_location }}<br>
         </p>
         <div class="event-item-buttons d-flex">
-            <a class="btn btn-secondary" :href="event.content.event_google_map_link.url" target="_blank">LOCATION MAP</a>
-            <a class="btn btn-secondary" :href="event.content.event_facebook_link.url" target="_blank">FACEBOOK EVENT PAGE</a>
+            <a class="btn btn-secondary" :href="events[0].content.event_google_map_link.url" target="_blank">LOCATION MAP</a>
+            <a class="btn btn-secondary" :href="events[0].content.event_facebook_link.url" target="_blank">FACEBOOK EVENT PAGE</a>
         </div>
     </div>
+    <div v-else>
+        There are no scheduled events at this time!
+    </div>
 </template>
+
   
 <script>
 
@@ -32,7 +35,7 @@ export default {
                 return response.json();
             })
             .then(data => {
-                this.events = data.stories || [];
+                this.events = data.stories && data.stories.length > 0 ? [data.stories[0]] : [];
             })
         },
         formatDate(dateString) {
