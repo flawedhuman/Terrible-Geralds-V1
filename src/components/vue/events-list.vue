@@ -5,7 +5,6 @@
             {{ formatDate(event.content.event_start_time) }}<br>
             {{ formatTime(event.content.event_start_time) }} - {{ formatTime(event.content.event_end_time) }}<br>
             Location: {{ event.content.event_location }}<br>
-            Event Info : {{  event.content.event_description  }}
         </p>
         <div class="event-item-buttons d-flex">
             <a class="btn btn-secondary" :href="event.content.event_google_map_link.url" target="_blank">LOCATION MAP</a>
