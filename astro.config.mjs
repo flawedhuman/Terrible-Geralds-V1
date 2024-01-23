@@ -4,6 +4,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.gnomebuddha.com',
+  site: 'https://www.terriblegeralds.com',
   integrations: [vue(), icon()]
 });
