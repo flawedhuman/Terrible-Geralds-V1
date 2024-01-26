@@ -17,9 +17,11 @@ import EventsList from "../components/vue/events-list.vue";
             
         </div>
         <aside>
-            <img class="moto-gerald" src="/images/moto-gerald.png" alt="VROOM VROOM!">
-            <h4 class="top-line">You’re never too old for a pizza party.</h4>
-            <a href="#" class="contact-trigger btn btn-secondary">Book Us Now</a>
+            <div class="sidebar-wrapper">
+                <img class="moto-gerald" src="/images/moto-gerald.png" alt="VROOM VROOM!">
+                <h4 class="top-line">You’re never too old for a pizza party.</h4>
+                <a href="#" class="contact-trigger btn btn-secondary">Book Us Now</a>
+            </div>
         </aside>
     </div>
 </MasterLayout>
@@ -71,6 +73,12 @@ import EventsList from "../components/vue/events-list.vue";
 
     .moto-gerald {
         animation: ride 1000ms ease-in-out infinite;
+    }
+
+    .sidebar-wrapper {
+        padding-top: 2rem;
+        position: sticky;
+        top: 0;
     }
 
     .top-line {
