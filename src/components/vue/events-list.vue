@@ -2,13 +2,13 @@
     <div class="event-item" v-for="event in events">
         <h4>{{ event.content.event_title }}</h4>
         <p class="event-item-description">
-            {{ formatDate(event.content.event_start_time) }}<br>
+            {{ getDayOnly(event.content.event_start_time) }}, {{ formatDate(event.content.event_start_time) }}<br>
             {{ formatTime(event.content.event_start_time) }} - {{ formatTime(event.content.event_end_time) }}<br>
             Location: {{ event.content.event_location }}<br>
         </p>
         <div class="event-item-buttons d-flex">
             <a class="btn btn-secondary" :href="event.content.event_google_map_link.url" target="_blank">LOCATION MAP</a>
-            <a class="btn btn-secondary" :href="event.content.event_facebook_link.url" target="_blank">FACEBOOK EVENT PAGE</a>
+            <a class="btn btn-secondary" :href="event.content.event_facebook_link.url" target="_blank">EVENT PAGE</a>
         </div>
     </div>
 </template>
@@ -33,6 +33,11 @@ export default {
             .then(data => {
                 this.events = data.stories || [];
             })
+        },
+        getDayOnly(dateString) {
+            const options = { weekday: 'long' };
+            const date = new Date(dateString);
+            return date.toLocaleString('en-US', options);
         },
         formatDate(dateString) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' };

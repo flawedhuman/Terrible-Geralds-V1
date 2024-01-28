@@ -2,13 +2,13 @@
     <div v-if="events.length > 0" class="event-item">
         <h4>{{ events[0].content.event_title }}</h4>
         <p class="event-item-description">
-            {{ formatDate(events[0].content.event_start_time) }}<br>
+            {{ getDayOnly(events[0].content.event_start_time) }}, {{ formatDate(events[0].content.event_start_time) }}<br>
             {{ formatTime(events[0].content.event_start_time) }} - {{ formatTime(events[0].content.event_end_time) }}<br>
             Location: {{ events[0].content.event_location }}<br>
         </p>
         <div class="event-item-buttons d-flex">
             <a class="btn btn-secondary" :href="events[0].content.event_google_map_link.url" target="_blank">LOCATION MAP</a>
-            <a class="btn btn-secondary" :href="events[0].content.event_facebook_link.url" target="_blank">FACEBOOK EVENT PAGE</a>
+            <a class="btn btn-secondary" :href="events[0].content.event_facebook_link.url" target="_blank">EVENT PAGE</a>
         </div>
     </div>
     <div v-else>
@@ -37,6 +37,11 @@ export default {
             .then(data => {
                 this.events = data.stories && data.stories.length > 0 ? [data.stories[0]] : [];
             })
+        },
+        getDayOnly(dateString) {
+            const options = { weekday: 'long' };
+            const date = new Date(dateString);
+            return date.toLocaleString('en-US', options);
         },
         formatDate(dateString) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
