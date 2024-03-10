@@ -1,7 +1,14 @@
 <template>
     <dialog>
         <div class="close-contact-form-wrap">
-            <button class="close-contact-form">X</button>
+            <div class="logo-close-button-wrap">
+                <img :src=tgLogo alt="Terrible Gerald's Logo">
+                <button class="close-contact-form">X</button>
+            </div>
+            <p>
+                At this time we are only licensed for sales in Nebraska. Sorry other states!
+            </p>
+            
         </div>
         <form method="dialog">
             <div v-if="!isFormSubmitted" class="items">
@@ -10,8 +17,12 @@
                     <input type="text" name="name" id="name" v-model="name" />
                 </div>
                 <div>
-                    <label for="emailPhone">Email or Phone Number</label>
-                    <input type="text" name="emailPhone" id="emailPhone" v-model="emailPhone" />
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" id="email" v-model="email" />
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone" v-model="phone" />
                 </div>
                 <div>
                     <label for="date">Event Date</label>
@@ -46,24 +57,27 @@
 <script>
 
 export default {
+
     data() {
         return {
             name: "",
-            emailPhone: "",
+            email: "",
+            phone: "",
             date: "",
             location: "",
             count: "",
             grapevine: "",
             message: "",
             error: "",
-            isFormSubmitted: false
+            isFormSubmitted: false,
+            tgLogo: "../../../public/images/tg-logo.png"
         };
     },
     methods: {
 
         submit() {
-            if (this.name == "" || this.emailPhone == "" || this.date == "" || this.location == "" || this.count == "" || this.grapevine == "" || this.message == "") {
-                this.error = "Please fill all the fields";
+            if (this.name == "" || this.email == "" || this.phone == "" || this.date == "" || this.location == "" || this.count == "" || this.grapevine == "" || this.message == "") {
+                this.error = "Please fill out all the fields";
                 return;
             } else {
                 this.error = "";
@@ -71,7 +85,8 @@ export default {
 
             const formData = new FormData();        
             formData.append("name", this.name);
-            formData.append("emailPhone", this.emailPhone);
+            formData.append("email", this.email);
+            formData.append("phone", this.phone);
             formData.append("date", this.date);
             formData.append("location", this.location);
             formData.append("count", this.count);
@@ -112,18 +127,42 @@ export default {
     }
 
     .close-contact-form-wrap {
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         width: 100%;
-        text-align: right;
+        text-align: left;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .close-contact-form-wrap p:first-of-type {
+        margin: 0;
+        font-weight: 600;
+        line-height: 1.2;
     }
 
     @media (max-width: 700px) {
 
         .close-contact-form-wrap {
+            padding-left: 0;
             max-width: 550px;
-            width: 90%;
-            text-align: right;
         }
 
+    }
+
+    .logo-close-button-wrap {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo-close-button-wrap img {
+        max-width: 250px;
     }
 
     #full-screen-wrap button.close-contact-form {
