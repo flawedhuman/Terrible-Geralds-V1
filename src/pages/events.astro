@@ -1,6 +1,7 @@
 ---
 import MasterLayout from "../layouts/MasterLayout.astro";
 import EventsList from "../components/vue/events-list.vue";
+let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
 ---
 <MasterLayout title="Terrible Gerald's Pizza | Events!">
     <div class="container">
@@ -8,7 +9,7 @@ import EventsList from "../components/vue/events-list.vue";
     </div>
 	<div class="container event-content d-flex">
         <div class="event-content-main">
-            <EventsList client:load />
+            <EventsList client:load token={storyblokToken} />
         </div>
         <aside>
             <div class="sidebar-wrapper">

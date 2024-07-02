@@ -1,5 +1,6 @@
 ---
 import HomepageEvent from "../components/vue/homepage-event.vue";
+let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
 ---
 
 <div class="container">
@@ -10,7 +11,7 @@ import HomepageEvent from "../components/vue/homepage-event.vue";
           </div>
           <div class="event-info-column">
               <h2>Next Event</h2>
-              <HomepageEvent client:load />
+              <HomepageEvent client:load token={storyblokToken} />
               <a href="/events" class="btn btn-primary">Upcoming Events</a>
           </div>
       </div>

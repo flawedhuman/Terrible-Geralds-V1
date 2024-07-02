@@ -20,6 +20,7 @@
 <script>
 
 export default {
+    props: ['token'],
     data() {
       return {
         events: [],
@@ -30,7 +31,7 @@ export default {
     },
     methods: {
         async getEvents() {
-            await fetch('https://api-us.storyblok.com/v2/cdn/stories/?token=0DfayINfNQIq9uKpkTvTZwtt')
+            await fetch(`https://api-us.storyblok.com/v2/cdn/stories/?token=${this.token}`)
             .then(response => {
                 return response.json();
             })
