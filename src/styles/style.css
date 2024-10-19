@@ -1,3 +1,7 @@
+:root {
+  --bg-black: #000;
+  --bg-white: #FFF;
+}
 /* Andy Bell CSS Reset */
 
 /* Box sizing rules */
@@ -205,4 +209,8 @@ a.contact-trigger:is(:hover, :focus, :active) {
 
 .d-flex {
     display: flex;
+}
+
+.d-grid {
+  display: grid;
 }

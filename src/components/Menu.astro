@@ -4,98 +4,68 @@
             <h3>Menu</h3>
             <h4 class="red">12” made to order pies</h4>
 
-            <!-- cheese bread -->
-            <div class="menu-item d-flex">
-                <!-- <div class="menu-item-price">
-                    <p>
-                        $15
-                    </p>
-                </div> -->
-                <div>
-                    <h4>CHEESE BREAD</h4>
-                    <p class="menu-item-description">
-                        Garlic parm sauce &amp; mozzarella, Served with house marinara
-                    </p>
-                </div>
-            </div>
+            <div class="pizza-grid d-grid">
 
-            <!-- margherita pizza -->
-            <div class="menu-item d-flex">
-                <!-- <div class="menu-item-price">
-                    <p>
-                        $17
-                    </p>
-                </div> -->
-                <div>
-                    <h4>margherita</h4>
+                <!-- cheese bread -->
+                <div class="menu-item-card d-grid">
+                    <div>
+                        <h4>CHEESE BREAD</h4>
+                        <p class="menu-item-description">
+                            Garlic parm sauce &amp; mozzarella, Served with house marinara
+                        </p>
+                    </div>
+                </div>
+
+                <!-- margherita pizza -->
+                <div class="menu-item-card d-grid">
+                    <img src="/images/pizzas/pep-talk.png" alt="Pep Talk">
+                    <h4 class="menu-item-title">margherita</h4>
                     <p class="menu-item-description">
                         House red sauce, fresh Basil, mozzarella
                     </p>
                 </div>
-            </div>
 
-            <!-- pepperoni pizza -->
-            <div class="menu-item d-flex">
-                <!-- <div class="menu-item-price">
-                    <p>
-                        $13
-                    </p>
-                </div> -->
-                <div>
-                    <h4>pepperoni</h4>
-                    <p class="menu-item-description">
-                        House red sauce, cup pepperonis, mozzarella
-                    </p>
+                <!-- pepperoni pizza -->
+                <div class="menu-item-card d-grid">
+                    <div>
+                        <h4>pepperoni</h4>
+                        <p class="menu-item-description">
+                            House red sauce, cup pepperonis, mozzarella
+                        </p>
+                    </div>
+                </div>
+
+                <!-- sal's pizza -->
+                <div class="menu-item-card d-grid">
+                    <div>
+                        <h4>sal's hot date</h4>
+                        <p class="menu-item-description">
+                            Soppressata Italian Salami, house red sauce, mozzarella and Mike's Hot Honey. 
+                        </p>
+                    </div>
+                </div>
+
+                <!-- the pep talk pizza -->
+                <div class="menu-item-card d-grid">
+                    <div>
+                        <h4>the pep talk</h4>
+                        <p class="menu-item-description">
+                            House red sauce, cup pepperonis, **calabrian peppers, mozzarella
+                        </p>
+                    </div>
+                </div>
+
+                <!-- crabby gerald pizza -->
+                <div class="menu-item-card d-grid">
+                    <div>
+                        <h4>crabby gerald</h4>
+                        <p class="menu-item-description">
+                            crab Rangoon mix, sweet Thai chili glaze, crispy wonton, green onion
+                        </p>
+                    </div>
                 </div>
             </div>
-
-            <!-- sal's pizza -->
-            <div class="menu-item d-flex">
-                <!-- <div class="menu-item-price">
-                    <p>
-                        $13
-                    </p>
-                </div> -->
-                <div>
-                    <h4>sal's hot date</h4>
-                    <p class="menu-item-description">
-                        Soppressata Italian Salami, house red sauce, mozzarella and Mike's Hot Honey. 
-                    </p>
-                </div>
-            </div>
-
-            <!-- the pep talk pizza -->
-            <div class="menu-item d-flex">
-                <!-- <div class="menu-item-price">
-                    <p>
-                        $18
-                    </p>
-                </div> -->
-                <div>
-                    <h4>the pep talk</h4>
-                    <p class="menu-item-description">
-                        House red sauce, cup pepperonis, **calabrian peppers, mozzarella
-                    </p>
-                </div>
-            </div>
-
-            <!-- crabby gerald pizza -->
-            <div class="menu-item d-flex">
-                <!-- <div class="menu-item-price">
-                    <p>
-                        $17
-                    </p>
-                </div> -->
-                <div>
-                    <h4>crabby gerald</h4>
-                    <p class="menu-item-description">
-                        crab Rangoon mix, sweet Thai chili glaze, crispy wonton, green onion
-                    </p>
-                </div>
-            </div>
-
             <h4 class="red">ask about our rotating special!</h4>
-            
             <p class="menu-item-description">
                 ** Calabrians = imported [red] Italian chiles. mild heat, tangy.
             </p>
@@ -175,6 +145,54 @@
         line-height: 1.2;
         text-transform: uppercase;
     }
+
+    /* MENU GRID */
+
+    .pizza-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Set to 1 column by default */
+        gap: 40px;
+
+        @media (min-width: 600px) {
+            .pizza-grid {
+                grid-template-columns: 1fr 1fr; /* Switch to 2 columns on larger screens */
+            }
+        }
+
+        .menu-item-card {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+            img {
+                grid-row: 1 / 3;
+                justify-self: center;
+                align-self: start;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 5px solid #ff0000;
+                object-fit: cover;
+                margin-top: -100px;  /* Adjust as needed to overlap with title */
+            }
+
+            h4.menu-item-title {
+                background-color: var(--bg-black);
+                grid-row: 2 / 3;
+                color: var(--bg-white);
+                padding: 50px 20px 20px; /* Adjust top padding to accommodate image */
+            }
+
+            .menu-item-description {
+                grid-row: 3 / 4;
+            }
+        }
+    }
+
+
+    /* RIGHT COLUMN TRAILER CTA */
 
     .trailer {
         padding-top: 2rem;
