@@ -1,0 +1,106 @@
+---
+import MasterLayout from "../layouts/MasterLayout.astro";
+---
+
+<MasterLayout>
+    
+    <div class="main-grid">
+        <div>
+            <div class="card">
+                <div class="img-wrap">
+                    <img src="/images/pizzas/pep-talk.png" alt="">
+                </div>
+                <h4>TITLE OF ITEM</h4>
+                <p>
+                    Description of item
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <div class="img-wrap">
+                    <img src="/images/pizzas/pep-talk.png" alt="">
+                </div>
+                <h4>TITLE OF ITEM</h4>
+                <p>
+                    Description of item
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <div class="img-wrap">
+                    <img src="/images/pizzas/pep-talk.png" alt="">
+                </div>
+                <h4>TITLE OF ITEM</h4>
+                <p>
+                    Description of item
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="card">
+                <div class="img-wrap">
+                    <img src="/images/pizzas/pep-talk.png" alt="">
+                </div>
+                <h4>TITLE OF ITEM</h4>
+                <p>
+                    Description of item
+                </p>
+            </div>
+        </div>
+<style>
+    
+    .main-grid {
+        margin-top: 6rem;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1, auto);
+        gap: 3rem 2.5rem;
+        max-width: 1000px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .img-wrap {
+        border-radius: 5px 5px 0 0;
+        background-color: black;
+    }
+
+    img {
+        max-width: 200px;
+        aspect-ratio: 1;
+        grid-row: 1 / 2;
+        margin-top: -100px;
+        margin-inline: auto;
+        border-radius: 50%;
+        border: 7px #FF0000 solid;
+
+    }
+
+    h4 {
+        grid-row: 2 / 3;
+        color: white;
+        background-color: black;
+        margin-bottom: 0;
+        padding: 1rem
+    }
+
+    p {
+        margin: 0;
+        padding: 1.25rem;
+        grid-row: 3 / 4;
+        border-top: 0;
+        border: 3px black solid;
+        border-radius: 0 0 5px 5px;
+    }
+
+</style>
+
+</MasterLayout>

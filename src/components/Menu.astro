@@ -1,76 +1,100 @@
 <section id="menu">
-    <div class="container d-flex">
-        <div>
+    <div class="container d-grid">
+        <div id="menu-left-column">
             <h3>Menu</h3>
-            <h4 class="red">12” made to order pies</h4>
+            <h4 class="red">12” made to order pies, one size, no slices</h4>
 
             <div class="pizza-grid d-grid">
 
-                <!-- cheese bread -->
+                <!-- cheese bread pizza -->
                 <div class="menu-item-card d-grid">
-                    <div>
-                        <h4>CHEESE BREAD</h4>
-                        <p class="menu-item-description">
-                            Garlic parm sauce &amp; mozzarella, Served with house marinara
-                        </p>
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/garlic-cheese-bread.png" alt="Garlic Cheese">
                     </div>
+                    <h4 class="menu-item-title">Garlic Cheese</h4>
+                    <p class="menu-item-description">
+                        Garlic parm sauce &amp; mozzarella, Served with house marinara
+                    </p>
+                </div>
+
+                <!-- pep talk pizza -->
+                <div class="menu-item-card d-grid">
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/pep-talk.png" alt="Pep Talk">
+                    </div>
+                    <h4 class="menu-item-title">The Pep Talk</h4>
+                    <p class="menu-item-description">
+                        House red sauce, cup pepperonis, **calabrian peppers, mozzarella
+                    </p>
                 </div>
 
                 <!-- margherita pizza -->
                 <div class="menu-item-card d-grid">
-                    <img src="/images/pizzas/pep-talk.png" alt="Pep Talk">
-                    <h4 class="menu-item-title">margherita</h4>
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/margherita.png" alt="Margherita">
+                    </div>
+                    <h4 class="menu-item-title">Margherita</h4>
                     <p class="menu-item-description">
-                        House red sauce, fresh Basil, mozzarella
+                        Mozzarella, basil, extra virgin olive oil, red sauce
                     </p>
                 </div>
 
                 <!-- pepperoni pizza -->
                 <div class="menu-item-card d-grid">
-                    <div>
-                        <h4>pepperoni</h4>
-                        <p class="menu-item-description">
-                            House red sauce, cup pepperonis, mozzarella
-                        </p>
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/pepperoni.png" alt="Pepperoni">
                     </div>
+                    <h4 class="menu-item-title">Pepperoni</h4>
+                    <p class="menu-item-description">
+                        House red sauce, cup pepperonis, mozzarella
+                    </p>
                 </div>
 
-                <!-- sal's pizza -->
+                <!-- sal's hot date pizza -->
                 <div class="menu-item-card d-grid">
-                    <div>
-                        <h4>sal's hot date</h4>
-                        <p class="menu-item-description">
-                            Soppressata Italian Salami, house red sauce, mozzarella and Mike's Hot Honey. 
-                        </p>
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/sals-hot-date.png" alt="Sal's Hot Date">
                     </div>
-                </div>
-
-                <!-- the pep talk pizza -->
-                <div class="menu-item-card d-grid">
-                    <div>
-                        <h4>the pep talk</h4>
-                        <p class="menu-item-description">
-                            House red sauce, cup pepperonis, **calabrian peppers, mozzarella
-                        </p>
-                    </div>
+                    <h4 class="menu-item-title">Sal's Hot Date</h4>
+                    <p class="menu-item-description">
+                        Soppressata Italian Salami, house red sauce, mozzarella and Mike's Hot Honey.
+                    </p>
                 </div>
 
                 <!-- crabby gerald pizza -->
                 <div class="menu-item-card d-grid">
-                    <div>
-                        <h4>crabby gerald</h4>
-                        <p class="menu-item-description">
-                            crab Rangoon mix, sweet Thai chili glaze, crispy wonton, green onion
-                        </p>
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/crabby-gerald.png" alt="Crabby Gerald">
                     </div>
+                    <h4 class="menu-item-title">Crabby Gerald</h4>
+                    <p class="menu-item-description">
+                        Crab Rangoon mix, sweet Thai chili glaze, crispy wonton, green onion
+                    </p>
                 </div>
+
+                <!-- buffalo dreamboat pizza -->
+                <div class="menu-item-card d-grid">
+                    <div class="img-bg-wrap">
+                        <img src="/images/pizzas/buffalo-dreamboat.png" alt="Buffalo Dreamboat">
+                    </div>
+                    <h4 class="menu-item-title">Buffalo Dreamboat</h4>
+                    <p class="menu-item-description">
+                        Tender chicken, house chipotle buffalo sauce, ranch drizzle, mozzarella, green onion
+                    </p>
+                </div>
+
+                <div class="menu-item-card cta d-grid">
+                    <h4 class="menu-item-title">Ask about our rotating specials!</h4>
+                </div>
+
             </div>
-            <h4 class="red">ask about our rotating special!</h4>
-            <p class="menu-item-description">
+            
+            <p>
                 ** Calabrians = imported [red] Italian chiles. mild heat, tangy.
             </p>
+
         </div>
-        <div class="trailer d-flex">
+        <div class="trailer">
             <h4>A slice of life on wheels!</h4>
             <a href="#" class="contact-trigger btn btn-secondary">Book Us Now</a>
             <img src="/images/trailer.jpg" alt="Our Home.">
@@ -84,7 +108,7 @@
         margin-bottom: 2rem;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
 
         section#menu {
             margin-bottom: 0;
@@ -92,17 +116,19 @@
         }
 
     }
-    
-    section#menu .container {
+
+    .container.d-grid {
         padding-top: 0;
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    @media (max-width: 900px) {
+    @media (min-width: 800px) {
 
-        section#menu .container {
-            flex-direction: column;
+        .container.d-grid {
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
         }
-
     }
 
     section#menu h3 {
@@ -133,79 +159,96 @@
     }
 
     .menu-item-price p {
-        margin-bottom: 0;
+        margin-block: 0;
         color: #FFF;
         font-size: 2em;
         font-weight: 400;
     }
 
     .menu-item-description {
-        font-size: 1.2em;
-        font-family: 'Sanchez', Georgia, 'Times New Roman', Times, serif;
-        line-height: 1.2;
-        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 1.25em;
+        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+        line-height: 1.25;
+        padding: 1rem;
+        grid-row: 3 / 4;
+        border-top: 0;
+        border: 3px black solid;
+        border-radius: 0 0 5px 5px;
+        background-color: var(--bg-white);
     }
 
     /* MENU GRID */
 
     .pizza-grid {
+        margin-bottom: 4rem;
         display: grid;
-        grid-template-columns: 1fr; /* Set to 1 column by default */
-        gap: 40px;
-
-        @media (min-width: 600px) {
-            .pizza-grid {
-                grid-template-columns: 1fr 1fr; /* Switch to 2 columns on larger screens */
-            }
-        }
+        grid-template-columns: 1fr;
+        gap: 3rem;
 
         .menu-item-card {
+            margin-top: 6rem;
             grid-template-columns: 1fr;
-            grid-template-rows: auto auto auto;
-            align-items: center;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
+            .img-bg-wrap {
+                padding: 1rem;
+                border-radius: 5px 5px 0 0;
+                background-color: var(--bg-black);
+            }
+
             img {
-                grid-row: 1 / 3;
+                margin-inline: auto;
+                grid-row: 1 / 2;
                 justify-self: center;
                 align-self: start;
                 width: 200px;
                 height: 200px;
                 border-radius: 50%;
                 border: 5px solid #ff0000;
-                object-fit: cover;
-                margin-top: -100px;  /* Adjust as needed to overlap with title */
+                margin-top: -116px;  
             }
 
-            h4.menu-item-title {
-                background-color: var(--bg-black);
-                grid-row: 2 / 3;
-                color: var(--bg-white);
-                padding: 50px 20px 20px; /* Adjust top padding to accommodate image */
-            }
-
-            .menu-item-description {
-                grid-row: 3 / 4;
-            }
         }
+
     }
 
+    @media (min-width: 800px) {
+
+        .pizza-grid {
+            grid-template-columns: 1fr 1fr; /* Switch to 2 columns on larger screens */
+        }
+
+    }
 
     /* RIGHT COLUMN TRAILER CTA */
 
     .trailer {
         padding-top: 2rem;
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
         position: sticky;
         top: 0;
-        height: 100%;
+        height: 640px;
     }
 
     .trailer img {
         max-width: 550px;
         width: 100%;
+    }
+
+    @media (max-width: 800px) {
+
+        .trailer {
+            margin-inline: auto;
+            padding-top: 0;
+        }
+
+        .trailer img {
+            max-width: 420px;
+            width: 100%;
+        }
+       
     }
 
 </style>
