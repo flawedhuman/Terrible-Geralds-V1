@@ -1,7 +1,10 @@
 :root {
   --bg-black: #000;
   --bg-white: #FFF;
+  
   --tg-red: rgb(194, 12, 33);
+
+  --ccp-cream: #F0DFC8;
 }
 /* Andy Bell CSS Reset */
 

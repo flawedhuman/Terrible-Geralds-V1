@@ -1,0 +1,26 @@
+---
+import '../styles/style.css';
+import ContactPanel from '../components/ContactPanel.astro';
+import ComebackHeader from '../components/ComebackHeader.astro';
+import ComebackFooter from '../components/ComebackFooter.astro';
+const { title="Terrible Gerald's Pizza / Unorthodox Neapolitan" } = Astro.props;
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/pizza-favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Terrible Gerald's Pizza is a fresh, approachable take on old world classics. We keep you in your comfort zone with traditional pies, and challenge the norms with crowd favorites like the Crabby Gerald—Omaha's premier Crab Rangoon Pie. Our concept is simple; unorthodox Neapolitan pizza, on wheels.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;800&family=Sanchez&display=swap" rel="stylesheet">
+		<title>{ title }</title>
+	</head>
+	<body>
+        <ComebackHeader />
+		<slot />
+        <ComebackFooter />
+		<ContactPanel />
+	</body>
+</html>
