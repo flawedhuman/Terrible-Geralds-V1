@@ -99,6 +99,13 @@ textarea:not([rows]) {
        url('/fonts/bobby_jones_soft-webfont.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Molle';
+  font-weight: 400;
+  src: url('/fonts/molle-italic.woff2') format('woff2'),
+       url('/fonts/molle-italic.woff') format('woff');
+}
+
 /* BASICS */
 
 body {
