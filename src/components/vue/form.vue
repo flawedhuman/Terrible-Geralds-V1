@@ -70,7 +70,7 @@ export default {
             message: "",
             error: "",
             isFormSubmitted: false,
-            tgLogo: "/images/tg-logo.png"
+            tgLogo: "/images/tg-logo.webp"
         };
     },
     methods: {
