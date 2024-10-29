@@ -7,7 +7,7 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
   <div class="hero-wrapper">
       <div class="flex-columns">
           <div class="gerald-and-pizza">
-            <video width="650" height="650"  autoplay loop muted playsinline>
+            <video autoplay loop muted playsinline>
               <source src="/images/gerald-biting-pizza.webm" type="video/webm">
             </video>
           </div>
@@ -82,7 +82,16 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
 .gerald-and-pizza {
   margin: 0 auto;
   position: relative;
+  width: 100%;
+  max-width: 650px;
   transform: translateY(-30px);
+
+  @media (max-width: 800px) {
+
+    max-width: 375px;
+
+  }
+
 }
 
 .gerald-and-pizza::before, 
