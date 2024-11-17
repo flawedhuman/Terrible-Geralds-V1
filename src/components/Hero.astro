@@ -14,7 +14,7 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
           <div class="event-info-column">
               <h2>Next Event</h2>
               <HomepageEvent client:load token={storyblokToken} />
-              <a href="/events" class="btn btn-primary">Upcoming Events</a>
+              <a href="/events" class="btn btn-primary no-top-margin">Upcoming Events</a>
           </div>
       </div>
       <div class="hero-footer">
@@ -30,7 +30,7 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
 }
 
 .hero-wrapper {
-  font-family: 'League Spartan', Arial, Verdana, sans-serif;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: #000;
   background-color: #BFA386;
@@ -169,12 +169,12 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
 }
 
 .event-info-column h2 {
-  margin: 1.5rem 0 3rem;
-  text-transform: lowercase;
-  font-weight: 600;
-  font-size: 4em;
+  margin: 1.5rem 0 4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3.5rem;
   line-height: 1;
-  font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .event-info-column h3 {
@@ -182,7 +182,7 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.5em;
-  font-family: 'Sanchez', Georgia, 'Times New Roman', Times, serif;
+  font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   line-height: 1;
 }
 
@@ -198,21 +198,31 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
   background: #000;
   display: block;
   border-radius: 100vw;
-  transform: translateX(-50px) translateY(20px);
+  transform: translateX(-50px) translateY(25px);
 }
 
 .hero-footer {
   padding: 2rem;
-  font-family: 'Sanchez', Georgia, 'Times New Roman', Times, serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   background-color: rgba(245, 9, 36, 0.5);
-  text-transform: uppercase;
   transform: translateY(12px);
+}
+
+.hero-footer h2 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1000px) {
   .hero-footer {
     text-align: center;
   }
+}
+
+.no-top-margin {
+  margin-top: 0;
 }
 
 @keyframes pizza-spin {

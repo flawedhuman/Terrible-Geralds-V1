@@ -13,9 +13,10 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
         </div>
         <aside>
             <div class="sidebar-wrapper">
-                <img class="moto-gerald" src="/images/moto-gerald.webp" alt="VROOM VROOM!">
-                <h4 class="top-line">You're never too old for a pizza party.</h4>
-                <a href="#" class="contact-trigger btn btn-secondary">Book Us Now</a>
+                <img class="<!-- moto-gerald -->guido-gerald" src="/images/guido-gerald.webp" alt="VROOM VROOM!">
+                <h4 class="top-line">Your Uncle Sal wants Gerald's for his PRIVATE EVENT and he's trying to pay for it!<br>
+                </h4>
+                <a href="#" class="contact-trigger btn btn-secondary">Book Us Now Before He Does!</a>
             </div>
         </aside>
     </div>
@@ -32,6 +33,10 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
         flex: 1;
     }
 
+    .event-item h4 {
+        font-size: 2.25rem;
+    }
+
     @media (max-width: 1000px) {
 
         .event-content {
@@ -44,7 +49,6 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
     .event-content aside {
         padding: 1rem 2rem 2rem;
         border-left: 5px rgb(194, 12, 33) solid;
-        max-width: 450px;
     }
 
     @media (max-width: 1000px) {
@@ -53,11 +57,21 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
             border-left: none;
         }
 
+        .sidebar-wrapper {
+            margin-inline: auto;
+            display: grid;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
     }
 
     .event-content aside .btn {
         margin: 1rem 0;
         padding: 1.25rem 2rem;
+        text-align: center;
+        line-height: 1.2;
     }
 
     .next-event-img {
@@ -70,15 +84,24 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
         animation: ride 1000ms ease-in-out infinite;
     }
 
+    .guido-gerald {
+        animation: ride 1000ms ease-in-out infinite;
+    }
+
     .sidebar-wrapper {
         padding-top: 2rem;
         position: sticky;
         top: 0;
+        max-width: 350px;
     }
 
     .top-line {
-        padding-top: 2rem;
+        margin-bottom: 1.7rem;
+        padding-block: 2rem 0;
         border-top: 5px rgb(194, 12, 33) solid;
+        text-align: center;
+        text-transform: capitalize;
+        line-height: 1.3;
     }
 
     @keyframes ride {

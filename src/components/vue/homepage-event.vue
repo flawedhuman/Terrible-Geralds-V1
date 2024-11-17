@@ -2,7 +2,7 @@
     <div v-if="events.length > 0" class="event-item">
         <h4>{{ events[0].content.event_title }}</h4>
         <p class="event-item-description">
-            {{ getDayOnly(events[0].content.event_start_time) }}, {{ formatDate(events[0].content.event_start_time) }}<br>
+            <span>{{ getDayOnly(events[0].content.event_start_time) }}, {{ formatDate(events[0].content.event_start_time) }}</span><br>
             {{ formatTime(events[0].content.event_start_time) }} - {{ formatTime(events[0].content.event_end_time) }}<br>
             Location: {{ events[0].content.event_location }}<br>
         </p>
@@ -62,7 +62,7 @@ export default {
 <style>
 
     .event-item {
-        margin-bottom: 2rem;
+        margin-bottom: 2.2rem;
         align-items: center;
         border-bottom: 5px rgb(194, 12, 33) solid;
     }
@@ -72,11 +72,14 @@ export default {
     }
 
     .event-item-description {
-        margin: 0;
-        padding-left: 1.5rem;
-        font-size: 1.6rem;
-        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
         line-height: 1.5;
+    }
+
+    .event-item-description span {
+        font-weight: 800;
     }
 
     .event-item-buttons {

@@ -71,7 +71,7 @@ export default {
         margin: 0;
         padding-left: 1.5rem;
         font-size: 1.6rem;
-        font-family: 'League Spartan', Arial, Helvetica, sans-serif;
+        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
         line-height: 1.5;
     }
 

@@ -6,9 +6,9 @@
                 <button class="close-contact-form">X</button>
             </div>
             <p>
-                At this time we are only licensed for sales in Nebraska. Sorry other states!
+                At this time we are only licensed for sales in Nebraska. Sorry other states! 
             </p>
-            
+            <p>Book us for upcoming private events like graduation parties, birthdays, weddings and work lunches!</p>
         </div>
         <form method="dialog">
             <div v-if="!isFormSubmitted" class="items">
@@ -48,7 +48,7 @@
                 <button class="btn btn-secondary" @click.prevent="submit">Submit</button>
             </div>
             <div v-if="isFormSubmitted">
-                <h1>Thank you for submitting the form.</h1>
+                <h1>Thank you for submitting the form. We will be in touch!</h1>
             </div>
         </form>
     </dialog>
@@ -77,7 +77,7 @@ export default {
 
         submit() {
             if (this.name == "" || this.email == "" || this.phone == "" || this.date == "" || this.location == "" || this.count == "" || this.grapevine == "" || this.message == "") {
-                this.error = "Please fill out all the fields";
+                this.error = "Please fill out all the form fields";
                 return;
             } else {
                 this.error = "";
@@ -107,6 +107,11 @@ export default {
 }
 </script>
 <style>
+
+    p strong {
+        border-bottom: 3px var(--tg-red) solid;
+    }
+
     .items {
         padding-inline: 1rem;
         display: flex;
@@ -166,11 +171,12 @@ export default {
     }
 
     #full-screen-wrap button.close-contact-form {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: right;
         background-color: transparent;
         border: none;
-        font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
         cursor: pointer;
         color: rgba(245, 9, 36, 1);
     }
@@ -183,8 +189,10 @@ export default {
     .items label {
         margin-bottom: 0.5rem;
         display: block;
-        font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
-        font-size: 2rem;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-size: 1.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
     }
 
     .items input, .items textarea {
@@ -200,7 +208,7 @@ export default {
         margin-top: 0;
         border-color: #000;
         font-size: 2em;
-        font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
+        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     }
 
     .error {
@@ -208,7 +216,7 @@ export default {
         font-size: 1.5rem;
         border-bottom: 3px #000 solid;
         rotate: 1deg;
-        font-family: 'Bobby Jones Soft Regular', 'League Spartan', Arial, Helvetica, sans-serif;
+        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
     }
 
     dialog::backdrop {
