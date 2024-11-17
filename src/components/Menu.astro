@@ -135,24 +135,24 @@
     section#menu h3 {
         margin-bottom: 2rem;
         text-transform: uppercase;
-        font-weight: 900;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-family: var(--font-headline);
     }
 
     section#menu h4.red {
         margin-bottom: 2.75rem;
         color: rgb(194, 12, 33);
         text-transform: uppercase;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
-        font-weight: 900;
+        font-family: var(--font-headline);
+        font-weight: 600;
         font-size: 2rem;
     }
 
     section#menu h4 {
         color: #000;
-        font-weight: 900;
+        font-weight: 600;
         font-size: 2rem;
-        line-height: 1.3;
+        line-height: 1.1;
         margin-bottom: 2rem;
     }
 
@@ -162,11 +162,12 @@
     }
 
     .menu-item-title {
-        text-transform: uppercase;
+        text-transform: l;
         font-size: 1.75rem;
-        font-weight: 900;
+        font-weight: 600;
         letter-spacing: 1px;
         padding-bottom: 0.5rem;
+        font-family: var(--font-headline);
     }
 
     .menu-item-price {
@@ -187,10 +188,10 @@
 
     .menu-item-description {
         margin-bottom: 0;
-        font-size: 1.2em;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        font-family: var(--font-pixel);
         font-weight: 500;
-        line-height: 1.25;
+        line-height: 1.025;
         padding: 1rem;
         grid-row: 3 / 4;
         border-top: 0;
@@ -272,10 +273,11 @@
 
     .trailer span {
         margin-top: 1.25rem;
-        font-size: 1.5rem;
-        font-weight: 900;
+        font-size: 2rem;
         display: inline-block;
         text-transform: capitalize;
+        font-family: var(--font-pixel);
+        line-height: 1;
     }
 
     @media (max-width: 800px) {

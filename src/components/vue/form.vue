@@ -108,10 +108,6 @@ export default {
 </script>
 <style>
 
-    p strong {
-        border-bottom: 3px var(--tg-red) solid;
-    }
-
     .items {
         padding-inline: 1rem;
         display: flex;
@@ -176,7 +172,7 @@ export default {
         background-color: transparent;
         border: none;
         font-weight: 900;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-family: var(--font-headline);
         cursor: pointer;
         color: rgba(245, 9, 36, 1);
     }
@@ -189,9 +185,9 @@ export default {
     .items label {
         margin-bottom: 0.5rem;
         display: block;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-family: var(--font-headline);
         font-size: 1.75rem;
-        font-weight: 800;
+        font-weight: 600;
         text-transform: uppercase;
     }
 
@@ -201,22 +197,26 @@ export default {
         border-radius: 0.5rem;
         border: 2px #000 solid;
         outline: none;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .items .btn.btn-primary {
         margin-top: 0;
         border-color: #000;
         font-size: 2em;
-        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-family: var(--font-headline);
+        text-transform: uppercase;
     }
 
     .error {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.85rem;
         border-bottom: 3px #000 solid;
         rotate: 1deg;
-        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-family: var(--font-headline);
+        color: var(--tg-red);
     }
 
     dialog::backdrop {

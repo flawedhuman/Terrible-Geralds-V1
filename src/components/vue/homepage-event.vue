@@ -73,9 +73,10 @@ export default {
 
     .event-item-description {
         margin-bottom: 10px;
-        font-size: 1.3rem;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
-        line-height: 1.5;
+        font-size: 2.4rem;
+        font-family: var(--font-pixel);
+        line-height: 1.2;
+        letter-spacing: 1px;
     }
 
     .event-item-description span {

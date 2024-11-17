@@ -70,9 +70,10 @@ export default {
     .event-item-description {
         margin: 0;
         padding-left: 1.5rem;
-        font-size: 1.6rem;
-        font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
-        line-height: 1.5;
+        font-size: 2.2rem;
+        font-family: var(--font-pixel);
+        line-height: 1.2;
+        letter-spacing: 1px;
     }
 
     .event-item-buttons {

@@ -1,10 +1,15 @@
 :root {
+  /* COLORS */
   --bg-black: #000;
   --bg-white: #FFF;
-  
   --tg-red: rgb(194, 12, 33);
-
   --ccp-cream: #F0DFC8;
+
+  /* FONTS */
+
+  --font-headline: "Belanosima", Arial, Helvetica, sans-serif;
+  --font-pixel: "VT323", monospace;
+
 }
 /* Andy Bell CSS Reset */
 
@@ -91,8 +96,8 @@ textarea:not([rows]) {
 
 body {
     background: #FFF;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    font-weight: 500;
+    font-family: var(--font-pixel);
+    font-weight: 400;
     color: #000;
 }
 
@@ -123,7 +128,7 @@ h1, h3 {
   font-size: 4em;
   line-height: 1;
   font-weight: 900;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: var(--font-headline);
 }
 
 h4 {
@@ -131,7 +136,7 @@ h4 {
   margin-bottom: 1rem;
   font-weight: 900;
   text-transform: uppercase;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: var(--font-headline);
 }
 
 section#menu .pizza-grid.d-grid .menu-item-card.d-grid h4.menu-item-title {
@@ -184,9 +189,9 @@ section#menu .pizza-grid.d-grid .menu-item-card.cta.d-grid {
   font-size: 1.75rem;
   line-height: 1;
   text-decoration: none;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-family: var(--font-headline);
   text-align: center;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {
