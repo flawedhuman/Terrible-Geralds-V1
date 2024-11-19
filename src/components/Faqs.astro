@@ -2,44 +2,34 @@
     <div class="container d-flex">
         <div>
             <h3>Frequently Asked Questions</h3>
-            <h4>Please do not ask these anymore. Thanks!</h4>
+            <h4>These are officially off-limits, and never to be heard again!</h4>
         </div>
     </div>
-    <div class="container d-grid faq-list">
+    <div class="container faq-list">
         <div>
             <p>
-                <strong>Who is Gerald?</strong>
-            </p>
-            <p>
+                <strong>Who is Gerald?</strong><br>
                 We're still not sure, but if you see him tell him he's late for work.
             </p>
             <hr>
             <p>
-                <strong>I really want TG's at my birthday/wedding/graduation party/office lunch/in my life. How do I book?</strong>
-            </p>
-            <p>
-                It's easy! Fill out <a class="contact-trigger" href="#">this form</a> and tell us a little about yourself. We'll get back to you in a jiff!
+                <strong>I really want TG's at my birthday/wedding/graduation party/office lunch/in my life. How do I book?</strong><br>
+                It's easy! Fill out <a class="contact-trigger inline-link" href="#">this form</a> and tell us a little about yourself. We'll get back to you in a jiff!
             </p>
             <hr>
             <p>
-                <strong>What states is TG's licensed to sell in?</strong>
-            </p>
-            <p>
+                <strong>What states is TG's licensed to sell in?</strong><br>
                 Currently, we are only licensed in Nebraska and as such can only operate within the state.
             </p>
             <hr>
             <p>
-                <strong>Can I order online?</strong>
-            </p>
-            <p>
+                <strong>Can I order online?</strong><br>
                 At this time, TG's has chosen to keep their eye on the prize and prioritize on-premise guests in order to ensure fresh, quality pies every time. We simply could not bear to see our product wilt at the hands of a delivery service.<br>
                 Short answer: Negative, sorry.
             </p>
             <hr>
             <p>
-                <strong>WHERE ARE YOU, GERALD?</strong>
-            </p>
-            <p>
+                <strong>WHERE ARE YOU, GERALD?</strong><br>
                 <a href="/events">Where, indeed?</a>
             </p>
             <hr>
@@ -49,16 +39,43 @@
 
 <style>
 
+
 .faq-list {
     font-size: 1.3rem;
-    line-height: 1;
     display: grid;
-    gap: 2.5rem;
+    gap: 0;
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+}
+
+.faq-list p {
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-family: var(--font-headline);
+    text-transform: capitalize;
+}
+
+.faq-list p strong {
+    font-weight: 600;
 }
 
 section#home-faqs {
-        padding-block: 3rem;
-    }
+    padding-block: 4rem;
+}
+
+section#home-faqs h4 {
+    font-size: 1.7rem;
+}
+
+.contact-trigger.inline-link {
+    padding: 0;
+    background-color: transparent;
+    color: var(--tg-dark-background);
+    border-bottom: 5px var(--tg-red) solid;
+    text-decoration: none;
+    display: inline;
+
+}
 
 #private-events {
     background-color: var(--tg-light-background);

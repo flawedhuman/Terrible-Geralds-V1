@@ -1,32 +1,31 @@
 <section id="private-events">
-    <div class="container d-flex">
-        <div>
-            <h3>Private Events</h3>
-            <h4 class="margin-bottom">Let's Get Into It!</h4>
-        </div>
-    </div>
     <div class="container d-grid private-events-grid">
         <div>
-            <ol class="list-split">
-                <li>
-                    <strong>Volume Driven</strong> (We have accommodated parties of 500 people.)
-                </li>
-                <li>
-                    <strong>Formal or Casual</strong> (We have all kinds of clothes. Don't sweat it.)
-                </li>
-                <li>
-                    Excellent for parties, the beach, work parties, golf parties, graduation parties, party parties and party party parties for dogs and animals all around.
-                </li>
-                <li>
-                    Each pie takes 70 seconds to cook (we've timed it) 
-                </li>
-                <li>
-                    We offer a full menu and make pies fresh from scratch, every time.
-                </li>
-                <li>
-                    We match the flow of the guests. Awkward lunch hour? No big, we'll make sure we keep it all fresh for when the swarm arrives.
-                </li>
-            </ol>
+            <div>
+                <h3 class="margin-top-private-events">Private Events</h3>
+                <h4 class="margin-bottom">Let's Get Into It!</h4>
+                <ol class="list-split">
+                    <li>
+                        <strong>Volume Driven</strong> (We have accommodated parties of 500 people.)
+                    </li>
+                    <li>
+                        <strong>Formal or Casual</strong> (We have all kinds of clothes. Don't sweat it.)
+                    </li>
+                    <li>
+                        Excellent for parties, the beach, work parties, golf parties, graduation parties, party parties and party party parties for dogs and animals all around.
+                    </li>
+                    <li>
+                        Each pie takes 70 seconds to cook (we've timed it) 
+                    </li>
+                    <li>
+                        We offer a full menu and make pies fresh from scratch, every time.
+                    </li>
+                    <li>
+                        We match the flow of the guests. Awkward lunch hour? No big, we'll make sure we keep it all fresh for when the swarm arrives.
+                    </li>
+                </ol>
+            </div>
+            
         </div>
         <div>
             <img class="moto-gerald" src="/images/moto-gerald.webp" alt="VROOOOOM!">
@@ -37,22 +36,43 @@
 <style>
 
 section#private-events {
-        padding-block: 3rem;
-    }
+    position: relative;
+    overflow: hidden;
+}
 
-#private-events {
-    background-color: var(--tg-light-background);
+.margin-top-private-events {
+    margin-top: 5rem;
+}
+
+section#private-events::before {
+    content: '';
+    padding-block: 2rem;
+    background-image: url("/images/dough-balls.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    position: absolute;
+    z-index: -1;
 }
 
 .private-events-grid {
+    padding-top: 0;
+    padding-bottom: 2rem;
     grid-template-columns: 2.7fr 1fr;
     grid-template-rows: 1fr;
+    align-items: center;
 }
 
 .list-split {
     columns: 2;
     gap: 3.5rem;
     font-size: 1.7rem;
+
+    li {
+        margin-bottom: 1.25rem;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -75,11 +95,11 @@ section#private-events {
 }
 
 .moto-gerald {
-    animation: ride infinite ease-in-out 400ms;
+    animation: ride infinite ease-in-out 800ms;
 }
 
 .margin-bottom {
-  margin-bottom: -1rem;
+  margin-bottom: 1rem;
 }
 
 @keyframes ride {
