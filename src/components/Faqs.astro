@@ -1,0 +1,114 @@
+<section id="home-faqs">
+    <div class="container d-flex">
+        <div>
+            <h3>Frequently Asked Questions</h3>
+            <h4>Please do not ask these anymore. Thanks!</h4>
+        </div>
+    </div>
+    <div class="container d-grid faq-list">
+        <div>
+            <p>
+                <strong>Who is Gerald?</strong>
+            </p>
+            <p>
+                We're still not sure, but if you see him tell him he's late for work.
+            </p>
+            <hr>
+            <p>
+                <strong>I really want TG's at my birthday/wedding/graduation party/office lunch/in my life. How do I book?</strong>
+            </p>
+            <p>
+                It's easy! Fill out <a class="contact-trigger" href="#">this form</a> and tell us a little about yourself. We'll get back to you in a jiff!
+            </p>
+            <hr>
+            <p>
+                <strong>What states is TG's licensed to sell in?</strong>
+            </p>
+            <p>
+                Currently, we are only licensed in Nebraska and as such can only operate within the state.
+            </p>
+            <hr>
+            <p>
+                <strong>Can I order online?</strong>
+            </p>
+            <p>
+                At this time, TG's has chosen to keep their eye on the prize and prioritize on-premise guests in order to ensure fresh, quality pies every time. We simply could not bear to see our product wilt at the hands of a delivery service.<br>
+                Short answer: Negative, sorry.
+            </p>
+            <hr>
+            <p>
+                <strong>WHERE ARE YOU, GERALD?</strong>
+            </p>
+            <p>
+                <a href="/events">Where, indeed?</a>
+            </p>
+            <hr>
+        </div>
+    </div>
+</section>
+
+<style>
+
+.faq-list {
+    font-size: 1.3rem;
+    line-height: 1;
+    display: grid;
+    gap: 2.5rem;
+}
+
+section#home-faqs {
+        padding-block: 3rem;
+    }
+
+#private-events {
+    background-color: var(--tg-light-background);
+}
+
+.private-events-grid {
+    grid-template-columns: 2.7fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.list-split {
+    columns: 2;
+    gap: 3.5rem;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 1000px) {
+    
+    .private-events-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .list-split {
+        columns: 1;
+        gap: 0;
+        font-size: 1.5rem;
+    }
+
+}
+
+#private-events h3 {
+    font-family: var(--font-headline);
+}
+
+.moto-gerald {
+    animation: ride infinite ease-in-out 400ms;
+}
+
+@keyframes ride {
+    0% {
+        transform: translateX(-10px);
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+</style>
