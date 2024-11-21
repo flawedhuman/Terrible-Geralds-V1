@@ -2,8 +2,11 @@
 import MasterLayout from "../layouts/MasterLayout.astro";
 import EventsList from "../components/vue/events-list.vue";
 let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
+const pageDescription = "Head out for a night on the town in Omaha, Ne! Review our Upcoming Events and find the perfect date night for you, or a killer spot to hang with neighbors!";
 ---
-<MasterLayout title="Terrible Gerald's Pizza | Events!" name="Have a night on the town in Omaha, Nebraska and eat the best pizza in Omaha. Search our upcoming events and find the right location for your all your local, private events!">
+<MasterLayout>
+    <meta slot="meta" name="description" content={pageDescription} />
+    <slot />
     <div class="container">
         <h1>Upcoming Events</h1>
     </div>
