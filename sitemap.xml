@@ -1,184 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-     <loc>http://www.terriblegeralds.com</loc>
-     <video:video>            
-        <video:thumbnail_loc>https://www.terriblegeralds.com/images/gerald-biting-pizza.webm
-        </video: thumbnail_loc>
-        <video:title>Gerald attends a a private event hosted by Terrible Gerald's Pizza from Omaha, Nebraska.</video:title>
-        <video:description>Gerald (of Omaha, Nebraska's best food truck pizza) is eating an entire 'Crabby Gerald' pizza his head levitates while being decapitated!</video:description>    
-        <video:content_loc>https://www.terriblegeralds.com/images/gerald-biting-pizza.webm</video:content_loc>
-        <video:player_loc autoplay="ap=1">https://www.terriblegeralds.com/images/gerald-biting-pizza.webm</video:player_loc>
-        <video:duration>4s</video:duration>
-        <video:expiration_date>2018-11-05T15:20:30+08:00</video:expiration_date>
-        <video:rating>5</video:rating>
-        <video:view_count>1000</video:view_count>
-        <video:publication_date>2024-01-05T15:20:30+08:00</video:publication_date>
-        <video:family_friendly>yes</video:family_friendly>
-        <video:restriction relationship="deny">GB USCA </video:restriction>
-        <video:requires_subscription>no</video:requires_subscription>
-        <video:live>no</video:live>
-     </video:video>
+    <loc>https://www.terriblegeralds.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/tg-logo.webp</image:loc>
+      <image:title>Terrible Gerald's Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/real-pizza.webp</image:loc>
+      <image:title>Real Pizza</image:title>
+    </image:image>
   </url>
+  
   <url>
-      <loc>http://www.terriblegeralds.com</loc>
-      <image:image>
-         <image:loc>https://www.terriblegeralds.com/</image:loc>
-         <image:title>The Terrible Gerald's Logo</image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location>Omaha, Nebraska</image:geo_location>
-         <image:caption>Our logo that is melting like our mozzarella</image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://www.terriblegeralds.com/images/pixel-pizza.webp</image:loc>
-         <image:title>Floating slice of Terrible Gerald pizza.</image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location>Omaha, Nebraska</image:geo_location>
-         <image:caption>This pizza slice be floating.</image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>https://www.terriblegeralds.com/images/turkey-gerald.webp</image:loc>
-         <image:title>You're a Turkey Gerald!</image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location>Omaha, Nebraska</image:geo_location>
-         <image:caption>Gobble Friggin' Gobble Jerks!</image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>https://www.terriblegeralds.com/images/pizzas/garlic-cheese-bread.webp</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption>Terrible Gerald's Garlic Cheese Bread Pizza</image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>https://www.terriblegeralds.com/images/pizzas/pep-talk.webp</image:loc>
-         <image:title>The Pep Talk Pizza</image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location>Omaha, Nebraska</image:geo_location>
-         <image:caption>Terrible Gerald's Pep Talk Pizza</image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>https://www.terriblegeralds.com/images/pizzas/margherita.webp</image:loc>
-         <image:title>Margherita Pizza</image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location>Omaha, Nebraska</image:geo_location>
-         <image:caption>Terrible Gerald's Margherita Pizza</image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>https://www.terriblegeralds.com/images/pizzas/pepperoni.webp</image:loc>
-         <image:title>Pepperoni Pizza</image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location>Omah, Nebraska</image:geo_location>
-         <image:caption>Terrible Gerald's Pepperoni Pizza</image:caption>
-      </image:image>
+    <loc>https://www.terriblegeralds.com/comeback-pizza</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/pizzas/buffalo-dreamboat.webp</image:loc>
+      <image:title>Buffalo Dreamboat Pizza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/pizzas/margherita.webp</image:loc>
+      <image:title>Margherita Pizza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/pizzas/pepperoni.webp</image:loc>
+      <image:title>Pepperoni Pizza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/pizzas/garlic-cheese-bread.webp</image:loc>
+      <image:title>Garlic Cheese Bread</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/dough-balls.webp</image:loc>
+      <image:title>Dough Balls</image:title>
+    </image:image>
+  </url>
 
+  <url>
+    <loc>https://www.terriblegeralds.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/about-dog-trailer.webp</image:loc>
+      <image:title>Food Trailer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/trailer-people.webp</image:loc>
+      <image:title>Trailer Staff</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/trailer.webp</image:loc>
+      <image:title>Trailer View</image:title>
+    </image:image>
+  </url>
 
-
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-      <image:image>
-         <image:loc>http://</image:loc>
-         <image:title></image:title>
-         <image:license>https://creativecommons.org/licenses/by-sa/2.0/</image:license>
-         <image:geo_location></image:geo_location>
-         <image:caption></image:caption>
-      </image:image>
-   </url>
-</urlset>
-
-
-
-
-
-   
-
+  <url>
+    <loc>https://www.terriblegeralds.com/characters</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://www.terriblegeralds.com/images/crabby-gerald.webp</image:loc>
+      <image:title>Crabb

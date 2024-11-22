@@ -1,0 +1,11 @@
+# robots.txt
+User-agent: *
+Allow: /
+Allow: /events
+Allow: /comeback-pizza
+Allow: https://terrible-geralds-pizza.printify.me/products
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /thank-you
+Disallow: /cart
+Disallow: /checkout
