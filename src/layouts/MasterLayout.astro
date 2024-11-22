@@ -14,7 +14,18 @@ const { title="Terrible Gerald's Pizza / Unorthodox Neapolitan" } = Astro.props;
 		<meta name="description" content="Terrible Gerald's Pizza is a fresh, approachable take on old world classics. We keep you in your comfort zone with traditional pies, and challenge the norms with crowd favorites like the Crabby Gerald—Omaha's premier Crab Rangoon Pie. Our concept is simple; unorthodox Neapolitan pizza, on wheels.">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">		<title>{ title }</title>
+		<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
+		<title>{ title }</title>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-7J21D8SRYH"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-7J21D8SRYH');
+		</script>
+		<!-- End Google tag -->
 	</head>
 	<body>
         <Header />
