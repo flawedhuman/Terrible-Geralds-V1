@@ -241,6 +241,7 @@ section#menu .pizza-grid.d-grid .menu-item-card.cta.d-grid {
 
 a.contact-trigger {
   padding: 0.5rem 1rem;
+  color: var(--bg-white)
 }
 
 a.contact-trigger:is(:link, :visited) {
