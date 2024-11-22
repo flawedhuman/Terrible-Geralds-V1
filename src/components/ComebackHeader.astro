@@ -41,6 +41,31 @@
 
 <style>
 
+    /* privacy link */
+
+    .cmpfooterlink {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        color: var(--bg-white);
+        transition: none;
+    }
+
+    .cmpfooterlink::before {
+        content: '';
+        display: none;
+    }
+
+    .cmpfooterlinkL::has(link, visited, hover) {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        color: var(--tg-red);
+        transition: none;
+    }
+
     header .container {
         padding: 1.2rem;
         gap: 2rem;
