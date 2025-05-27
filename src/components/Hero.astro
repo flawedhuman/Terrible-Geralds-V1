@@ -7,9 +7,7 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
   <div class="hero-wrapper">
       <div class="flex-columns">
           <div class="gerald-and-pizza">
-            <video autoplay loop muted playsinline>
-              <source src="/images/gerald-biting-pizza.webm" type="video/webm">
-            </video>
+            <img src="/images/gerald-biting-pizza.gif" alt="Nom!">
           </div>
           <div class="event-info-column">
               <h2>Next Event</h2>
@@ -129,7 +127,7 @@ let storyblokToken = import.meta.env.SECRET_STORYBLOK_KEY;
   animation-delay: 1s;
 }
 
-.gerald-and-pizza video {
+.gerald-and-pizza {
   margin-inline: auto;
   max-width: 650px;
   width: 100%;
