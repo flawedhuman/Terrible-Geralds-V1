@@ -12,7 +12,7 @@
         </div>
     </div>
     <div v-else>
-        There are no scheduled events at this time!
+        <p class="no-events-message">There are no scheduled events at this time!</p>
     </div>
 </template>
 
@@ -86,6 +86,10 @@ export default {
     .event-item-buttons {
         font-size: 0.8rem;
         gap: 1.5rem;
+    }
+
+    .no-events-message {
+        margin-bottom: 2rem;
     }
     
     @media (max-width: 600px) {
